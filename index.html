@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sir Christopher Wren</title>
+    <link rel="stylesheet" href="buttonstyle.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <audio src="Stile.mp3" id="Stile-Audio"></audio>
+    <audio src="SanPaul.mp3" id="SanPaul-Audio"></audio>
+</head>
+<body>
+    <div class="arrow-container">
+        <div class="arrow-div"><i onclick="CambioMinus()" class="arrow left"></i></div>
+        <div class="center-first" onclick="PopUp()"></div>
+         <!-- Audio Button -->
+         <a class="glightbox_video" id="San-Audio-Button" onclick="SanPaulAudio()"> 
+            <svg width="131" height="131" viewBox="0 0 131 131" fill="none">
+                <path class="inner-circle" d="M65 21C40.1488 21 20 41.1488 20 66C20 90.8512 40.1488 111 65 111C89.8512 111 110 90.8512 110 66C110 41.1488 89.8512 21 65 21Z" fill="white"></path>
+                <circle class="outer_circle" cx="65.5" cy="65.5" r="64" stroke="white"></circle>
+                <path class="play" fill-rule="evenodd" clip-rule="evenodd" d="M60 76V57L77 66.7774L60 76Z" fill="#BF2428"></path>
+            </svg>
+            </a>
+            <button id="San-Text-Button" onclick="SanPaul()">TEXT</button>
+        <div class="arrow-div"><i onclick="CambioPlus()" class="arrow right"></i></div>
+    </div>
+
+    <div class="first slide" id="first">
+        
+    </div>
+
+    <div class="second slide">
+   
+    </div>
+
+    <div class="third slide">
+        
+    </div>
+
+    <div class="fourth slide">
+        
+    </div>
+
+
+    <!-- 
+        PopUp
+    -->
+    
+    <div class="First PopUp">
+
+        <div class="PopUp-Head">
+            <p class="title">BIOGRAPHY</p>
+            <span class="close" onclick="Close()">&times;</span>
+        </div>
+
+        <div class="PopUp-Content">
+            <iframe width="76%" height="94%" src="https://www.youtube.com/embed/cx4mdhKXFR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+
+    <div class="Second PopUp">
+
+        <div class="PopUp-Head">
+            <p class="title">STYLE</p>
+            <span class="close" onclick="Close()">&times;</span>
+        </div>
+
+        <div class="PopUp-Content" id="Second-Content">
+            <p class="Text">Christopher Wren was not originally an architect. In fact, in that period it was usual that mathematicians and scientists also did works that today are specifically for architects, and this is seen in Galileo's work "Two New Sciences" where the first science is not dynamics but the strength of materials. His earliest architectural work is a family chapel in Pembroke College (Cambridge) and he was commissioned by his uncle for his ideology and style. He realised Oxford's New Theatre for which the public criticized him for his architectural flaws, due to his refusal to bend the knee to authorities. In Paris he was influenced by Italian Renaissance's style and by Bernini. After that he completed his greatest architectural work, the St. Paul's Cathedral, in the context of the reconstruction after the Great Fire of London.</p>
+            <a class="glightbox_video" id="suca" onclick="StileAudio()"> 
+                <svg width="131" height="131" viewBox="0 0 131 131" fill="none">
+                    <path class="inner-circle" d="M65 21C40.1488 21 20 41.1488 20 66C20 90.8512 40.1488 111 65 111C89.8512 111 110 90.8512 110 66C110 41.1488 89.8512 21 65 21Z" fill="white"></path>
+                    <circle class="outer_circle" cx="65.5" cy="65.5" r="64" stroke="white"></circle>
+                    <path class="play" fill-rule="evenodd" clip-rule="evenodd" d="M60 76V57L77 66.7774L60 76Z" fill="#BF2428"></path>
+                </svg>
+                </a>
+        </div>
+        <!-- Audio Button-->
+   
+    </div>
+
+    <div class="Third PopUp">
+
+        <div class="PopUp-Head">
+            <p class="title">St. Paul Cathedral</p>
+            <span class="close" onclick="Close()">&times;</span>
+        </div>
+
+        <div class="PopUp-Content">
+           <p class="Text">St Paul's Cathedral it's considered the masterpiece of the architect Cristopher Wren. It's one of the two anglican church in London and the biggest religious building in England. Built between 1675 and 1711 on the ashes of the old St Paul's after the Great Fire in 1666, in these period Wren made thousand of drawings for the realization of the building divided in two phases by historians. In the first phase, up to 1685, Wren planned the Cathedral with equal-length nave and choir arms and single-storey aisle walls. Soon after the accession of James II in 1685, when the Cathedral’s funding was increased, he enlarged the west end and added upper aisle walls (known as ‘screen walls’) to create an all-round two-storey elevation beneath a more richly modelled dome, wider and higher than the one he had designed at the start of work. The ‘Revised design’ of c.1685–87 (as it is now known) was partly inspired by what Wren then knew, from drawings and engravings, of Jules Hardouin-Mansart’s domed church of Les Invalides in Paris, begun in 1677. </p>
+        </div>
+        
+    </div>
+
+    <div class="Fourth PopUp">
+
+        <div class="PopUp-Head">
+            <p class="title">Scientifc Career</p>
+            <span class="close" onclick="Close()">&times;</span>
+        </div>
+
+        <div class="PopUp-Content">
+           <p class="Text" id="Scienza">Receiving his Master of Arts in 1653, Wren was elected fellow of All Souls College in Oxford, where he started an active period of research and experiment, ending with his appointment as Gresham professor of astronomy in Gresham College in 1657. In the following year, with the death of Oliver Cromwell causing political disorder, the college was occupied by the military, and Wren returned to Oxford, where he probably remained during the events that led to the restoration of Charles II in 1660. He returned to Gresham College, where scholarly activity resumed and an intellectual circle proposed a society “for the promotion of Physical-Mathematical Experimental Learning”. After obtaining the patronage of the restored monarchy, this group became the Royal Society, Wren being one of the most active participants and the author of the preamble to its charter.
+            In 1661 Wren was elected Savilian professor of astronomy at Oxford for his exact measurement work of arc of cycloid and in 1669 he was appointed surveyor of works to Charles II. In these years he spent most of his time for mechanical, astronomical and hydraulic projects until his resignation from Oxford’s chair in 1673.</p>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
