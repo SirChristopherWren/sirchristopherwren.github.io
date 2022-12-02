@@ -1,5 +1,5 @@
 //Var declaration
- 
+
 var z = 0;
 var o = 0;
 var b = 0;
@@ -17,7 +17,7 @@ function CambioMinus() {
     z--
     $(("."+backgroundAsa[(z)])).css("visibility", "visible")
     $(("."+backgroundAsa[(z+1)])).css("visibility", "hidden")
-
+    Close()
     if(z == 2)  {
         $(".center-first").css("visibility", "hidden")
         $("#San-Audio-Button").css("visibility", "visible");
@@ -31,7 +31,7 @@ function CambioMinus() {
 
 function CambioPlus() {
     z++
-
+    Close()
     if(z == (backgroundAsa.length)) {
         z = 0
         $(("."+backgroundAsa[(z)])).css("visibility", "visible")
@@ -62,7 +62,7 @@ $(("."+backgroundAsa[((backgroundAsa.length-1))])).css("visibility", "hidden")
 
 function Ciao() {
     console.log(backgroundAsa)
-  
+
 }
 
 //PopUp
@@ -86,7 +86,7 @@ function FirstPop() {
     console.log("ciao");
     $('.First').css("visibility", "visible")
     flag = true;
-    flag2 = true; 
+    flag2 = true;
 }
 function Close() {
     $('.PopUp').css("visibility", "hidden")
@@ -124,16 +124,16 @@ function SanPaulAudio() {
         }else {
         sanPaulAudio.pause();
         o=0
-        }  
+        }
 }
 
 
-//First - Background Glow 
+//First - Background Glow
 
 var bgImageArray = ["/images/1.png", "/images/15.png"]
 secs = 4;
 bgImageArray.forEach(function(img){
-    new Image().src = img; 
+    new Image().src = img;
     // caches images, avoiding white flash between background replacements
 });
 var flag2 = false;
@@ -148,21 +148,21 @@ function backgroundSequence() {
 			    first12.style.backgroundSize ="cover";
                 break;
             }else{
-            setTimeout(function(){ 
+            setTimeout(function(){
                 first12.style.background = "url(" + bgImageArray[k] + ") no-repeat center center fixed";
                 first12.style.backgroundSize ="cover";
-            if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
-            }, (secs * 1000) * i)	
+            if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }
+            }, (secs * 1000) * i)
     }
 	}
 }
 backgroundSequence();
 
-//Second - 
+//Second -
 var bgImageArray2 = ["/images/2.png", "/images/21.png"]
 secs = 4;
 bgImageArray2.forEach(function(img){
-    new Image().src = img; 
+    new Image().src = img;
     // caches images, avoiding white flash between background replacements
 });
 var flag3 = false;
@@ -171,17 +171,17 @@ function backgroundSequence2() {
 	window.clearTimeout();
 	var k = 0;
 	for (i = 0; i < bgImageArray.length; i++) {
-            if(flag3){  
+            if(flag3){
                 setTimeout(backgroundSequence2, 0);
                 secondo.style.background = "url(./images/2.png) no-repeat center center fixed";
 			    secondo.style.backgroundSize ="cover";
                 break;
             }else{
-            setTimeout(function(){ 
+            setTimeout(function(){
                 secondo.style.background = "url(" + bgImageArray2[k] + ") no-repeat center center fixed";
                 secondo.style.backgroundSize ="cover";
-            if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence2() }, (secs * 1000))} else { k++; }			
-            }, (secs * 1000) * i)	
+            if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence2() }, (secs * 1000))} else { k++; }
+            }, (secs * 1000) * i)
     }
 	}
 }
@@ -193,7 +193,7 @@ backgroundSequence2();
 var bgImageArray1 = ["/images/4.png", "/images/41.png"]
 secs = 4;
 bgImageArray1.forEach(function(img){
-    new Image().src = img; 
+    new Image().src = img;
     // caches images, avoiding white flash between background replacements
 });
 var flag1 = false;
@@ -208,12 +208,11 @@ function backgroundSequence4() {
 			    fourth12.style.backgroundSize ="cover";
                 break;
             }else{
-            setTimeout(function(){ 
+            setTimeout(function(){
                 fourth12.style.background = "url(" + bgImageArray1[k] + ") no-repeat center center fixed";
                 fourth12.style.backgroundSize ="cover";
-            if ((k + 1) === bgImageArray1.length) { setTimeout(function() { backgroundSequence4() }, (secs * 1000))} else { k++; }			
-            }, (secs * 1000) * i)	
+            if ((k + 1) === bgImageArray1.length) { setTimeout(function() { backgroundSequence4() }, (secs * 1000))} else { k++; }
+            }, (secs * 1000) * i)
     }
 	}
 }
-
